@@ -7,9 +7,9 @@ variable "sg_for_jenkins" {}
 variable "enable_public_ip_address" {}
 variable "user_data_install_jenkins" {}
 
-output "ssh_connection_string_for_ec2" {
-  value = format("%s%s", "ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
-}
+# output "ssh_connection_string_for_ec2" {
+#   value = format("%s%s", "ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
+# }
 
 output "jenkins_ec2_instance_ip" {
   value = aws_instance.jenkins_ec2_instance_ip.id
